@@ -5,96 +5,202 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Franco Estrutura Metálica</title>
+
 <style>
+* { box-sizing: border-box; }
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
+ margin: 0;
+ font-family: Arial, sans-serif;
+ color: #222;
 }
 header {
-  background: #172b40;
-  color: white;
-  text-align: center;
-  padding: 35px 15px;
+ background: #14283d;
+ color: white;
+ padding: 25px 6%;
+ text-align: center;
 }
-header h1 { margin: 0; }
+header h1 { margin: 0; font-size: 27px; }
+header span { color: #e5ad43; }
 nav {
-  background: #243c54;
-  padding: 15px;
-  text-align: center;
+ background: #203b55;
+ padding: 15px;
+ text-align: center;
 }
 nav a {
-  color: white;
-  margin: 12px;
-  text-decoration: none;
+ color: white;
+ text-decoration: none;
+ margin: 10px;
+ font-weight: bold;
 }
 .hero {
-  padding: 90px 20px;
-  text-align: center;
-  background: #dce5ec;
+ background: linear-gradient(#07152299,#07152299),
+ url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85') center/cover;
+ min-height: 450px;
+ display: flex;
+ align-items: center;
+ padding: 50px 8%;
+ color: white;
 }
-.hero h2 { font-size: 34px; }
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
+.hero div { max-width: 650px; }
+.hero h2 { font-size: 42px; }
+.hero p { font-size: 19px; line-height: 1.6; }
 .botao {
-  display: inline-block;
-  background: #16834a;
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+ display: inline-block;
+ background: #159447;
+ color: white;
+ padding: 16px 25px;
+ text-decoration: none;
+ border-radius: 7px;
+ font-weight: bold;
+ margin-top: 15px;
 }
+section {
+ padding: 55px 7%;
+ text-align: center;
+}
+section h2 {
+ color: #14283d;
+ font-size: 30px;
+}
+.servicos, .galeria {
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+ gap: 22px;
+ margin-top: 30px;
+}
+.card {
+ background: #f3f5f7;
+ border-radius: 10px;
+ overflow: hidden;
+ padding-bottom: 15px;
+}
+.card img {
+ width: 100%;
+ height: 210px;
+ object-fit: cover;
+}
+.card h3 { color: #14283d; }
+.card p { padding: 0 15px; line-height: 1.5; }
+.galeria img {
+ width: 100%;
+ height: 230px;
+ object-fit: cover;
+ border-radius: 9px;
+}
+.sobre { background: #f3f5f7; }
+.contato {
+ background: #14283d;
+ color: white;
+}
+.contato h2 { color: white; }
 footer {
-  background: #172b40;
-  color: white;
-  padding: 25px;
-  text-align: center;
+ background: #0b1724;
+ color: white;
+ text-align: center;
+ padding: 25px;
+}
+.whatsapp-fixo {
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ background: #159447;
+ color: white;
+ padding: 15px 20px;
+ border-radius: 30px;
+ text-decoration: none;
+ font-weight: bold;
+ z-index: 10;
+}
+@media(max-width:600px) {
+ .hero h2 { font-size: 31px; }
+ nav a { display: inline-block; margin: 7px; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>FRANCO ESTRUTURA METÁLICA</h1>
-<p>Qualidade, resistência e confiança em cada projeto.</p>
+ <h1>FRANCO <span>ESTRUTURA METÁLICA</span></h1>
+ <p>Qualidade, resistência e confiança!</p>
 </header>
 
 <nav>
-<a href="#inicio">Início</a>
-<a href="#empresa">Empresa</a>
-<a href="#servicos">Serviços</a>
-<a href="#contato">Contato</a>
+ <a href="#inicio">Início</a>
+ <a href="#empresa">Empresa</a>
+ <a href="#servicos">Serviços</a>
+ <a href="#fotos">Fotos</a>
+ <a href="#contato">Contato</a>
 </nav>
 
 <div class="hero" id="inicio">
-<h2>Construindo grandes projetos!</h2>
-<p>Soluções em estruturas metálicas para sua obra.</p>
-<a class="botao" href="#contato">Solicitar orçamento</a>
+ <div>
+  <h2>ESTRUTURAS METÁLICAS PARA SEU PROJETO</h2>
+  <p>Soluções em estruturas metálicas, galpões e coberturas. Entre em contato e solicite seu orçamento!</p>
+  <a class="botao" href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento." target="_blank">
+   SOLICITAR ORÇAMENTO
+  </a>
+ </div>
 </div>
 
-<section id="empresa">
-<h2>Sobre nossa empresa</h2>
-<p>A Franco Estrutura Metálica trabalha com soluções em estruturas metálicas, buscando qualidade e satisfação dos clientes.</p>
+<section class="sobre" id="empresa">
+ <h2>Sobre nossa empresa</h2>
+ <p>A Franco Estrutura Metálica oferece soluções em estruturas metálicas, com compromisso com a qualidade e a satisfação dos clientes.</p>
 </section>
 
 <section id="servicos">
-<h2>Nossos serviços</h2>
-<p>Estruturas metálicas | Galpões | Coberturas | Projetos metálicos</p>
+ <h2>Nossos Serviços</h2>
+ <div class="servicos">
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Edificação moderna">
+   <h3>Estruturas Metálicas</h3>
+   <p>Estruturas para projetos comerciais e industriais.</p>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Obra de construção">
+   <h3>Galpões</h3>
+   <p>Soluções para espaços industriais e comerciais.</p>
+  </div>
+
+  <div class="card">
+   <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85" alt="Trabalho de metal">
+   <h3>Fabricação e Montagem</h3>
+   <p>Fabricação e montagem de estruturas metálicas.</p>
+  </div>
+
+ </div>
 </section>
 
-<section id="contato">
-<h2>Entre em contato</h2>
-<p>Solicite seu orçamento pelo WhatsApp.</p>
-<a class="botao" href="https://wa.me/55SEUNUMERO">Falar pelo WhatsApp</a>
+<section id="fotos">
+ <h2>Galeria de Imagens</h2>
+ <p>Exemplos ilustrativos de construções e estruturas metálicas.</p>
+ <div class="galeria">
+  <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="Construção moderna">
+  <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Edifício industrial">
+  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Obra de construção">
+ </div>
+</section>
+
+<section class="contato" id="contato">
+ <h2>PEÇA SEU ORÇAMENTO!</h2>
+ <p>Fale conosco pelo WhatsApp.</p>
+ <p><strong>(11) 97527-3375</strong></p>
+ <a class="botao" href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento." target="_blank">
+  CHAMAR NO WHATSAPP
+ </a>
 </section>
 
 <footer>
-<p>© 2026 Franco Estrutura Metálica - Todos os direitos reservados.</p>
+ <h3>FRANCO ESTRUTURA METÁLICA</h3>
+ <p>Qualidade e confiança em cada projeto.</p>
+ <p>© 2026 - Todos os direitos reservados.</p>
 </footer>
+
+<a class="whatsapp-fixo" href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento." target="_blank">
+ WhatsApp
+</a>
 
 </body>
 </html>
