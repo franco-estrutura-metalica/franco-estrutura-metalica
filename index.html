@@ -4,584 +4,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Franco Estrutura Metálica | Soluções em Aço</title>
-<meta name="description" content="Franco Estrutura Metálica. Soluções em estruturas metálicas, galpões, fabricação e montagem. Solicite seu orçamento pelo WhatsApp.">
-<meta name="theme-color" content="#0a1424">
-
+<title>Franco Estrutura Metálica | Galpões e Coberturas</title>
+<meta name="description" content="Franco Estrutura Metálica. Fabricação e montagem de estruturas metálicas, galpões e coberturas. Solicite seu orçamento pelo WhatsApp.">
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-:root {
-  --fundo: #091321;
-  --fundo2: #101e30;
-  --dourado: #d9ad62;
-  --branco: #ffffff;
-  --cinza: #aab5c3;
-  --verde: #159b59;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fff;
-  color: #182536;
-  line-height: 1.6;
-}
-
-header {
-  background: var(--fundo);
-  color: white;
-  padding: 22px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: var(--dourado);
-}
-
-nav {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #e7edf4;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: .3s;
-}
-
-nav a:hover {
-  color: var(--dourado);
-}
-
-.hero {
-  min-height: 570px;
-  padding: 90px 8%;
-  display: flex;
-  align-items: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 85% 35%, #314967 0%, transparent 40%),
-    linear-gradient(125deg, #091321 0%, #142940 65%, #091321 100%);
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 430px;
-  height: 430px;
-  right: 5%;
-  top: 70px;
-  border: 1px solid #d9ad6240;
-  transform: rotate(45deg);
-  box-shadow: 0 0 0 35px #d9ad6208,
-              0 0 0 75px #d9ad6205;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  right: 13%;
-  top: 175px;
-  border: 2px solid #d9ad6280;
-  transform: rotate(45deg);
-}
-
-.hero-content {
-  max-width: 720px;
-  position: relative;
-  z-index: 1;
-}
-
-.etiqueta {
-  color: var(--dourado);
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(36px, 5vw, 62px);
-  line-height: 1.12;
-  margin: 22px 0;
-  letter-spacing: -1px;
-}
-
-.hero h1 span {
-  color: var(--dourado);
-}
-
-.hero p {
-  color: #d0d9e4;
-  font-size: 18px;
-  max-width: 570px;
-  margin-bottom: 28px;
-}
-
-.botao {
-  display: inline-block;
-  background: var(--dourado);
-  color: #101b29;
-  text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.botao:hover {
-  background: white;
-  transform: translateY(-3px);
-}
-
-.botao-verde {
-  background: var(--verde);
-  color: white;
-}
-
-.botao-verde:hover {
-  background: #107b47;
-  color: white;
-}
-
-section {
-  padding: 85px 8%;
-}
-
-.titulo {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 45px;
-}
-
-.titulo span {
-  color: #ad7b32;
-  font-weight: bold;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.titulo h2 {
-  font-size: 34px;
-  color: #102239;
-  margin: 10px 0;
-  line-height: 1.2;
-}
-
-.titulo p {
-  color: #697789;
-}
-
-.sobre {
-  background: #f4f6f9;
-}
-
-.sobre-conteudo {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.sobre-conteudo p {
-  color: #536174;
-  font-size: 17px;
-  margin-top: 15px;
-}
-
-.destaques {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 38px;
-}
-
-.destaque {
-  background: white;
-  border: 1px solid #e5e9ef;
-  border-radius: 9px;
-  padding: 25px 15px;
-}
-
-.destaque strong {
-  display: block;
-  color: #ad7b32;
-  font-size: 17px;
-  margin-bottom: 5px;
-}
-
-.destaque small {
-  color: #657184;
-}
-
-.servicos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: white;
-  border: 1px solid #e2e7ee;
-  border-radius: 9px;
-  padding: 30px 25px;
-  transition: .3s;
-  border-bottom: 3px solid var(--dourado);
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px #14283d15;
-}
-
-.numero {
-  color: var(--dourado);
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.card h3 {
-  color: #102239;
-  font-size: 20px;
-  margin: 12px 0;
-}
-
-.card p {
-  color: #687588;
-  font-size: 15px;
-}
-
-.diferencial {
-  background: var(--fundo);
-  color: white;
-  text-align: center;
-}
-
-.diferencial .titulo h2 {
-  color: white;
-}
-
-.diferencial .titulo p {
-  color: #bac5d2;
-}
-
-.diferencial-lista {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1050px;
-  margin: auto;
-}
-
-.diferencial-item {
-  padding: 25px;
-  border: 1px solid #ffffff20;
-  border-radius: 8px;
-}
-
-.diferencial-item h3 {
-  color: var(--dourado);
-  margin-bottom: 8px;
-}
-
-.diferencial-item p {
-  color: #c0cad6;
-  font-size: 14px;
-}
-
-.contato {
-  background: #f4f6f9;
-  text-align: center;
-}
-
-.contato .titulo {
-  margin-bottom: 25px;
-}
-
-.contato p {
-  color: #566477;
-  margin-bottom: 12px;
-}
-
-.telefone {
-  color: #102239;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 15px 0 25px;
-}
-
-footer {
-  background: #050c15;
-  color: white;
-  text-align: center;
-  padding: 35px 7%;
-}
-
-footer h3 {
-  letter-spacing: 1px;
-}
-
-footer span {
-  color: var(--dourado);
-}
-
-footer p {
-  color: #aeb9c7;
-  font-size: 13px;
-  margin-top: 8px;
-}
-
-.whatsapp-fixo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
-  background: var(--verde);
-  color: white;
-  text-decoration: none;
-  padding: 14px 20px;
-  border-radius: 35px;
-  font-weight: bold;
-  box-shadow: 0 5px 20px #0004;
-}
-
-@media(max-width: 800px) {
-  header {
-    justify-content: center;
-    text-align: center;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero {
-    min-height: 510px;
-  }
-
-  .hero::before {
-    right: -220px;
-  }
-
-  .hero::after {
-    right: -150px;
-  }
-
-  .servicos,
-  .diferencial-lista {
-    grid-template-columns: 1fr;
-  }
-
-  .destaques {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 65px 6%;
-  }
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#263342}
+header{background:#10263d;color:white;text-align:center;padding:30px 15px}
+header h1{margin:0;font-size:30px}
+header span{color:#e8ad42}
+header p{margin-bottom:0}
+nav{background:#1d3b59;padding:16px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold}
+.hero{background:linear-gradient(90deg,#071727e8,#07172780),url('Constru%C3%A7%C3%A3o%20em%20Estruturas%20Met%C3%A1licas.png') center/cover;min-height:480px;display:flex;align-items:center;padding:55px 9%;color:white}
+.hero div{max-width:700px}
+.hero h2{font-size:44px;margin:0 0 18px}
+.hero p{font-size:20px;line-height:1.6}
+.botao{display:inline-block;background:#159447;color:white;padding:16px 25px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:15px}
+section{padding:60px 7%;text-align:center}
+section h2{font-size:32px;color:#10263d}
+.sobre,.servicos{background:#f2f5f8}
+.servicos-grid,.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:30px}
+.card{background:white;border-radius:10px;padding:25px;box-shadow:0 3px 12px #00000012}
+.card h3{color:#163957}
+.galeria img{width:100%;height:240px;object-fit:cover;border-radius:10px}
+.contato{background:#10263d;color:white}
+.contato h2{color:white}
+footer{background:#091725;color:white;text-align:center;padding:25px}
+.whatsapp-fixo{position:fixed;right:20px;bottom:20px;background:#159447;color:white;padding:16px 22px;border-radius:30px;text-decoration:none;font-weight:bold}
+@media(max-width:600px){
+.hero h2{font-size:32px}
+nav a{display:inline-block;margin:8px}
 }
 </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo">
-    FRANCO <span>ESTRUTURA METÁLICA</span>
-  </div>
-
-  <nav>
-    <a href="#inicio">INÍCIO</a>
-    <a href="#empresa">EMPRESA</a>
-    <a href="#servicos">SERVIÇOS</a>
-    <a href="#contato">CONTATO</a>
-  </nav>
+<h1>FRANCO <span>ESTRUTURA METÁLICA</span></h1>
+<p>Qualidade, resistência e confiança!</p>
 </header>
-
-<main>
-
+<nav>
+<a href="#inicio">Início</a>
+<a href="#empresa">Empresa</a>
+<a href="#servicos">Serviços</a>
+<a href="#fotos">Fotos</a>
+<a href="#contato">Contato</a>
+</nav>
 <div class="hero" id="inicio">
-  <div class="hero-content">
-    <div class="etiqueta">FRANCO ESTRUTURA METÁLICA</div>
-
-    <h1>
-      SOLUÇÕES EM<br>
-      <span>ESTRUTURAS METÁLICAS</span>
-    </h1>
-
-    <p>
-      Projetos, fabricação e montagem de estruturas metálicas.
-      Compromisso com qualidade, organização e soluções para
-      cada necessidade.
-    </p>
-
-    <a class="botao"
-       href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento."
-       target="_blank">
-      SOLICITAR ORÇAMENTO
-    </a>
-  </div>
+<div>
+<h2>ESTRUTURAS METÁLICAS PARA SEU PROJETO</h2>
+<p>Fabricação e montagem de estruturas metálicas, galpões e coberturas com qualidade e compromisso.</p>
+<a class="botao" href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento" target="_blank">SOLICITAR ORÇAMENTO</a>
 </div>
-
+</div>
 <section class="sobre" id="empresa">
-  <div class="sobre-conteudo">
-    <div class="titulo">
-      <span>QUEM SOMOS</span>
-      <h2>Compromisso em cada projeto</h2>
-      <p>Conheça a Franco Estrutura Metálica.</p>
-    </div>
-
-    <p>
-      A Franco Estrutura Metálica trabalha com soluções
-      em estruturas metálicas, galpões, fabricação e montagem.
-      Nosso objetivo é atender cada cliente com atenção,
-      responsabilidade e compromisso com o serviço realizado.
-    </p>
-
-    <div class="destaques">
-      <div class="destaque">
-        <strong>QUALIDADE</strong>
-        <small>Atenção aos detalhes</small>
-      </div>
-
-      <div class="destaque">
-        <strong>COMPROMISSO</strong>
-        <small>Responsabilidade em cada etapa</small>
-      </div>
-
-      <div class="destaque">
-        <strong>CONFIANÇA</strong>
-        <small>Respeito aos nossos clientes</small>
-      </div>
-    </div>
-  </div>
+<h2>Sobre a Franco</h2>
+<p>Trabalhamos com soluções em estruturas metálicas, buscando qualidade, segurança e satisfação em cada projeto.</p>
 </section>
-
 <section id="servicos">
-  <div class="titulo">
-    <span>O QUE FAZEMOS</span>
-    <h2>Nossos serviços</h2>
-    <p>Soluções para necessidades comerciais e industriais.</p>
-  </div>
-
-  <div class="servicos">
-    <div class="card">
-      <div class="numero">01</div>
-      <h3>Estruturas Metálicas</h3>
-      <p>
-        Soluções em estruturas metálicas para diferentes
-        tipos de projetos e aplicações.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="numero">02</div>
-      <h3>Galpões</h3>
-      <p>
-        Soluções metálicas para espaços comerciais,
-        industriais e áreas de trabalho.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="numero">03</div>
-      <h3>Fabricação e Montagem</h3>
-      <p>
-        Serviços de fabricação e montagem de estruturas
-        metálicas conforme as necessidades do projeto.
-      </p>
-    </div>
-  </div>
+<h2>Nossos Serviços</h2>
+<div class="servicos-grid">
+<div class="card"><h3>Estruturas Metálicas</h3><p>Projetos de estruturas metálicas para diferentes necessidades.</p></div>
+<div class="card"><h3>Galpões Metálicos</h3><p>Fabricação e montagem de galpões comerciais e industriais.</p></div>
+<div class="card"><h3>Coberturas</h3><p>Estruturas e soluções metálicas para coberturas.</p></div>
+<div class="card"><h3>Fabricação e Montagem</h3><p>Serviços de fabricação e montagem de estruturas metálicas.</p></div>
+</div>
 </section>
-
-<section class="diferencial">
-  <div class="titulo">
-    <span>NOSSO COMPROMISSO</span>
-    <h2>Uma parceria de confiança</h2>
-    <p>
-      Trabalhamos para oferecer atendimento claro
-      e soluções adequadas a cada projeto.
-    </p>
-  </div>
-
-  <div class="diferencial-lista">
-    <div class="diferencial-item">
-      <h3>Atendimento</h3>
-      <p>Contato direto para entender sua necessidade.</p>
-    </div>
-
-    <div class="diferencial-item">
-      <h3>Planejamento</h3>
-      <p>Atenção às características de cada serviço.</p>
-    </div>
-
-    <div class="diferencial-item">
-      <h3>Compromisso</h3>
-      <p>Responsabilidade durante a execução do trabalho.</p>
-    </div>
-  </div>
+<section id="fotos" class="sobre">
+<h2>Nossos Trabalhos</h2>
+<p>Conheça exemplos de estruturas metálicas.</p>
+<div class="galeria">
+<img src="Constru%C3%A7%C3%A3o%20em%20Estruturas%20Met%C3%A1licas.png" alt="Construção de estrutura metálica">
+<img src="Constru%C3%A7%C3%A3o%20em%20Estruturas%20Met%C3%A1licas.png" alt="Montagem de estrutura metálica">
+<img src="Constru%C3%A7%C3%A3o%20em%20Estruturas%20Met%C3%A1licas.png" alt="Estrutura metálica pronta">
+</div>
 </section>
-
 <section class="contato" id="contato">
-  <div class="titulo">
-    <span>FALE CONOSCO</span>
-    <h2>Vamos conversar sobre seu projeto?</h2>
-    <p>
-      Entre em contato e solicite seu orçamento.
-      Estamos à disposição para atender você.
-    </p>
-  </div>
-
-  <div class="telefone">(11) 97527-3375</div>
-
-  <a class="botao botao-verde"
-     href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento."
-     target="_blank">
-    CHAMAR NO WHATSAPP
-  </a>
+<h2>FAÇA SEU ORÇAMENTO!</h2>
+<p>Entre em contato com a Franco Estrutura Metálica.</p>
+<p><strong>WhatsApp: (11) 97527-3375</strong></p>
+<a class="botao" href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento" target="_blank">CHAMAR NO WHATSAPP</a>
 </section>
-
-</main>
-
 <footer>
-  <h3>FRANCO <span>ESTRUTURA METÁLICA</span></h3>
-  <p>Qualidade, responsabilidade e confiança.</p>
-  <p>© 2026 Franco Estrutura Metálica. Todos os direitos reservados.</p>
+<h3>FRANCO ESTRUTURA METÁLICA</h3>
+<p>Qualidade e confiança em cada projeto.</p>
+<p>© 2026 - Todos os direitos reservados.</p>
 </footer>
-
-<a class="whatsapp-fixo"
-   href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento."
-   target="_blank">
-  WhatsApp
-</a>
-
+<a class="whatsapp-fixo" href="https://wa.me/5511975273375?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento" target="_blank">WhatsApp</a>
 </body>
 </html>
-
-
-
 
